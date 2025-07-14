@@ -65,6 +65,20 @@
     value: 1
   });
 </script>
+
+<script>
+  // Only fire purchase if user comes from the landing page
+  if (document.referrer.includes("index.html") || document.referrer.includes("posture-landing")) {
+    gtag('event', 'purchase', {
+      event_category: 'conversion',
+      event_label: 'Thank You Page Visit',
+      value: 1
+    });
+  } else {
+    console.warn("Purchase event not fired — invalid referrer.");
+  }
+</script>
+
 </head>
 <body>
   <div class="container">
