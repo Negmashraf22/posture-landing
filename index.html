@@ -149,6 +149,25 @@
       font-size: 14px;
     }
   </style>
+
+  <!-- Google tag (gtag.js) with debug_mode enabled -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PFGYM5FBZT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PFGYM5FBZT', {
+    'debug_mode': true
+  });
+
+  // ✅ Fire a custom event named 'purchase'
+  gtag('event', 'purchase', {
+    event_category: 'conversion',
+    event_label: 'Form Submission',
+    value: 1
+  });
+</script>
+
 </head>
 <body>
 
